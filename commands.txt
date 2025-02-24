@@ -1,0 +1,9 @@
+sudo apt update
+sudo apt install python3-pip
+sudo apt install python3.10-venv
+python3 -m venv endtoendyoutube_venv
+source endtoendyoutube_venv/bin/activate
+pip install --upgrade awscli
+pip install apache-airflow
+airflow standalone
+pip install apache-airflow-providers-amazon
