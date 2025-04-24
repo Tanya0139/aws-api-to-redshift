@@ -22,7 +22,7 @@ Real estate data pipeline using Apache Airflow, AWS Lambda, Amazon S3, and Amazo
 ![Redshift Query](https://github.com/Tanya0139/aws-api-to-redshift/blob/main/zillow-aws-ref-images/redshift-query-editor.png)
 
 **CSV Conversion Lambda**  
-![CSV Conversion Lambda](https://github.com/Tanya0139/aws-api-to-redshift/blob/main/zillow-aws-ref-images/transformation-convert-to-csv-lambdaFunction.png)
+![CSV Conversion Lambda](https://github.com/Tanya0139/aws-api-to-redshift/blob/main/aws-api-to-redshift/zillow-aws-ref-images/transformation-convert-to-csv-lambdaFucntion.png)
 
 ---
 
