@@ -6,6 +6,9 @@ Real estate data pipeline using Apache Airflow, AWS Lambda, Amazon S3, and Amazo
 
 ## 🖼️ Gallery – Quick Preview
 
+**Dashboard**  
+<img src="https://github.com/Tanya0139/tanya0139/blob/main/assets_tanya/zillow.png" alt="AWS API to Redshift">
+
 **Airflow DAG**  
 ![Airflow DAG](https://github.com/Tanya0139/aws-api-to-redshift/blob/main/zillow-aws-ref-images/airflow-graph.png)
 
