@@ -173,7 +173,3 @@ ORDER BY avg_price DESC;
 ```
 
 ---
-
-## 📧 Contact
-
-For questions or support, contact: your-email@example.com
