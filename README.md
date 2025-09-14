@@ -31,7 +31,50 @@ Real estate data pipeline using Apache Airflow, AWS Lambda, Amazon S3, and Amazo
 
 ## 🛠️ Project Overview
 
-This project fetches real estate data from **Zillow API**, transforms it using **AWS Lambda**, and loads it into **Amazon Redshift** for analysis. The system is orchestrated with **Apache Airflow** and utilizes S3 for data staging.
+This project fetches real estate data from **Zillow API**, transforms it using AWS Lambda, and loads it into Amazon Redshift for analysis. The system is orchestrated with Apache Airflow and utilizes S3 for data staging.
+
+---
+## 📊 Data Analysis
+
+### Exploratory Data Analysis (EDA)
+
+- **Descriptive Statistics**: Summarized distributions of price, living area, bedrooms, and bathrooms.  
+- **Visualizations**:  
+  - Histogram of home prices (revealed strong right skew).  
+  - Scatter plot of living area vs. price (positive correlation with outliers).  
+  - Count plots of hometype distribution across zipcodes.  
+  - Heatmap of correlations among numerical variables.  
+- **Key Insight**: Price varies widely across locations, and living area shows strong predictive power.  
+
+---
+
+### Statistical Analysis
+
+#### 1. T-Test (Condo vs. Single Family)  
+- **Result**: Could not be performed since dataset lacked Single Family homes.  
+- **Implication**: Indicates data imbalance; future studies should include diverse hometypes.  
+
+#### 2. ANOVA (Price Differences by Zip Code)  
+- **Result**: Significant difference found across zipcodes *(F = 9.21, p < 0.001)*.  
+- **Post-hoc Tukey Test**:  
+  - **90402 > 90403, 90404** (significantly higher).  
+  - **90403 ≈ 90404** (no significant difference).  
+- **Implication**: Location strongly drives price differences; 90402 is a premium market.  
+
+#### 3. Chi-Square Test (Hometype vs. Zip Code)  
+- **Result**: Strong association *(χ² = 38.07, p < 0.001)*.  
+- **Observation**:  
+  - **90402** → exclusively Single Family.  
+  - **90403** → dominated by Condos.  
+  - **90404** → more diverse with many Multi-Family units.  
+- **Implication**: Housing stock distribution differs by neighborhood, likely due to zoning and demand.  
+
+---
+
+### 🔑 Overall Insights
+- **Location matters**: 90402 is the most expensive zipcode.  
+- **Hometype is location-dependent**: Some areas are condo-heavy, while others are single-family dominated.  
+- **Data limitation**: Lack of balanced hometype data reduces comparability.  
 
 ---
 
